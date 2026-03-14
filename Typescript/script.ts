@@ -80,3 +80,30 @@ const sum2 = (g: number, h: number, i: number = 4): void => {
   console.log(g + h + i);
 };
 sum2(3, 4);
+
+//Enums: enum is a data type given to constant values( a set of constants)
+//enums are basic contant values, enums will work as array, or will work as object etc.
+
+enum days {
+  sunday = 40,
+  monday,
+  tuesday,
+  wednesday,
+  thursday,
+  firday,
+  saturday,
+}
+console.log(days.firday);
+console.log(days[41]);
+console.log(days[days.thursday]);
+
+//never: never is data type which defines the situation/function that should never run
+//eg. some functions are runing and they are giving some errors, those kind of thing use never,
+//normally have 3 kind of function: 1.function return, frunction do not return, void 3. function throwing errors( for this kind of thing use never, if we do not want to throw error, (i.e written that should never run)
+
+function dummy(): never {
+  throw Error;
+} //it is not returning anything, it is never(not void),
+//never is used in only situating where error throwing happens
+
+

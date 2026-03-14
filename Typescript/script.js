@@ -65,3 +65,25 @@ var sum2 = function (g, h, i) {
     console.log(g + h + i);
 };
 sum2(3, 4);
+//Enums: enum is a data type given to constant values( a set of constants)
+//enums are basic contant values, enums will work as array, or will work as object etc.
+var days;
+(function (days) {
+    days[days["sunday"] = 40] = "sunday";
+    days[days["monday"] = 41] = "monday";
+    days[days["tuesday"] = 42] = "tuesday";
+    days[days["wednesday"] = 43] = "wednesday";
+    days[days["thursday"] = 44] = "thursday";
+    days[days["firday"] = 45] = "firday";
+    days[days["saturday"] = 46] = "saturday";
+})(days || (days = {}));
+console.log(days.firday);
+console.log(days[41]);
+console.log(days[days.thursday]);
+//never: never is data type which defines the situation/function that should never run
+//eg. some functions are runing and they are giving some errors, those kind of thing use never,
+//normally have 3 kind of function: 1.function return, frunction do not return, void 3. function throwing errors( for this kind of thing use never, if we do not want to throw error, (i.e written that should never run)
+function dummy() {
+    throw Error;
+} //it is not returning anything, it is never(not void),
+//never is used in only situating where error throwing happens
