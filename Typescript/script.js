@@ -86,4 +86,52 @@ console.log(days[days.thursday]);
 function dummy() {
     throw Error;
 } //it is not returning anything, it is never(not void),
-//never is used in only situating where error throwing happens
+var obj = {
+    name: "manish",
+    age: 25,
+};
+var user1 = {
+    name: "Manish",
+    email: "abc@gmail.com",
+    phone_number: 34343433434,
+};
+var user2 = {
+    name: "Manish",
+    email: "abc@gmail.com",
+    phone_number: 34343433434,
+    salary: 2343,
+};
+console.log(user1, user2);
+var Employee = /** @class */ (function () {
+    function Employee(n, s, e) {
+        this.name = n;
+        this.salary = s;
+        this.email = e;
+    }
+    return Employee;
+}());
+var xyz = new Employee("Manish", 234343, "abc@gmail.com");
+console.log(xyz);
+var ta = 23;
+var obj2 = {
+    name: "Ajinkya",
+    email: "asd@gmail.com",
+    salary: 343343,
+};
+console.log(ta, obj2);
+var obj3 = {
+    name: "dsd",
+    email: "dsd@gmail.com",
+    phone_no: 4848383838,
+};
+console.log(obj3);
+var sum3 = function (a, b) { return a + b; };
+var sub3 = function (a, b) { return (a = b); };
+var mul3 = function (a, b) { return a * b; };
+var div3 = function (a, b) { return a / b; };
+console.log(sum3(4, 2), sub3(5, 2), mul3(6, 3), div3(8, 2));
+//Type assertion
+function clicky(e) {
+    var btn = e.target;
+    console.log(btn.textContent);
+}

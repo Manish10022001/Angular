@@ -106,4 +106,113 @@ function dummy(): never {
 } //it is not returning anything, it is never(not void),
 //never is used in only situating where error throwing happens
 
+//Interface: is user defined data type specifically for objects
+interface myObj {
+  name: string;
+  age: number;
+  salary?: number; //salary is optional
+}
 
+let obj: myObj = {
+  name: "manish",
+  age: 25,
+};
+
+//Create a object with name, email, phone number with its respective interface;
+interface userInfo {
+  name: string;
+  email: string;
+  phone_number?: number;
+}
+//interrface can have inheritance; i.e take properties of parent interface and use it in child interface
+//if interface taking interface -> extends
+//if class is taking interface -> implements, and we can write as many interfaces as we need
+//interface is used for objects so call will take this, we cannot define interface for function, only for objects
+
+interface userInfo2 extends userInfo {
+  salary: number;
+}
+
+let user1: userInfo = {
+  name: "Manish",
+  email: "abc@gmail.com",
+  phone_number: 34343433434,
+};
+
+let user2: userInfo2 = {
+  name: "Manish",
+  email: "abc@gmail.com",
+  phone_number: 34343433434,
+  salary: 2343,
+};
+console.log(user1, user2);
+
+class Employee implements userInfo {
+  name;
+  salary;
+  email;
+  constructor(n: string, s: number, e: string) {
+    this.name = n;
+    this.salary = s;
+    this.email = e;
+  }
+}
+let xyz = new Employee("Manish", 234343, "abc@gmail.com");
+console.log(xyz);
+
+//Type alias
+//alias means another name or fake name,
+//give another name to data type
+
+//type alias can be used for objects and other thing, but interface can only be used for objects
+type x = number | string | boolean;
+let ta: x = 23;
+
+type myObj2 = {
+  name: string;
+  email: string;
+  salary: number;
+};
+
+let obj2: myObj2 = {
+  name: "Ajinkya",
+  email: "asd@gmail.com",
+  salary: 343343,
+};
+console.log(ta, obj2);
+
+//create a object with name, email, phone number using Type alias
+
+type myObj3 = {
+  name: string;
+  email: string;
+  phone_no: number;
+};
+
+let obj3: myObj3 = {
+  name: "dsd",
+  email: "dsd@gmail.com",
+  phone_no: 4848383838,
+};
+console.log(obj3);
+
+//type alias can also be used with functions
+
+//without type alias we have to give paramerter and its type for all, but using type alias, we create a common type, which we pass to functions
+// let sum3 = (a:number, b:number):number => a + b;
+// let sub3 = (a:number, b:number):number => a - b;
+// let mul3 = (a:number, b:number):number => a * b;
+// let div3 = (a:number, b:number):number => a / b;
+type commonType = (p: number, q: number) => number; //one function takes 2 parameters as number and return a number
+
+let sum3: commonType = (a, b) => a + b;
+let sub3: commonType = (a, b) => (a = b);
+let mul3: commonType = (a, b) => a * b;
+let div3: commonType = (a, b) => a / b;
+console.log(sum3(4, 2), sub3(5, 2), mul3(6, 3), div3(8, 2));
+
+//Type assertion
+function clicky(e: Event) {
+  const btn = e.target as HTMLButtonElement;
+  console.log(btn.textContent);
+}
