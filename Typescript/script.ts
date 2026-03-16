@@ -216,3 +216,11 @@ function clicky(e: Event) {
   const btn = e.target as HTMLButtonElement;
   console.log(btn.textContent);
 }
+
+//Generics
+function sum4<T>(x: T, y: T) {
+  console.log(typeof x, typeof y);
+}
+sum4<number>(3, 4);
+sum4<string>("abc", "efg");
+sum4<boolean>(true, false);

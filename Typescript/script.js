@@ -135,3 +135,10 @@ function clicky(e) {
     var btn = e.target;
     console.log(btn.textContent);
 }
+//Generics
+function sum4(x, y) {
+    console.log(typeof x, typeof y);
+}
+sum4(3, 4);
+sum4("abc", "efg");
+sum4(true, false);
