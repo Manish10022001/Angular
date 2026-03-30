@@ -1,0 +1,10 @@
+<div id="product">
+  <img src="{{ img }}" alt="{{ title }}" />
+  <h2>{{ title }}</h2>
+  <p>{{ price }}</p>
+  <!-- <button disabled="{{ isNotAvailable }}">Add to cart</button> -->
+  <!-- here disable weill not work
+   as we pass data as string using string interpolation and string value is also true, so to resolve it we use 
+   Proper binding using [] square brackets, in this case we bind the property using []-->
+  <button [disabled]="isNotAvailable">Add to cart</button>
+</div>
