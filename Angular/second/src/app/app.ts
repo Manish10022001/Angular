@@ -1,13 +1,20 @@
 import { Component, signal } from '@angular/core';
 // import { RouterOutlet } from '@angular/router';
-{/*
+{
+  /*
    Component to Template:
      1. string interpolation: it is a way of getting data from component to template as a string
      we will do it by {{}}(double flower brackets)
      2.property Binding:
      it is also another way of sending data from component to template but it won't send data as string.
      we will do it using square brackets []
-*/}
+
+     above two are using when component data comes to template, but if something happens in template and need to tell to component, like someone click button, someone type something,  someone scrolled, some mousehover, if events happen in html, then component should know 
+    Template to Component
+      this is called Event Binding. it is used to send data from template to component
+     we will achieve this by paranthesis '()'
+*/
+}
 @Component({
   selector: 'app-root',
   // imports: [RouterOutlet],
@@ -24,4 +31,9 @@ export class App {
   //by default sting value is always true;
 
   //so to resolve it we use property binding([])
+
+  //template to component
+  fun() {
+    alert('Button Clicked');
+  }
 }
