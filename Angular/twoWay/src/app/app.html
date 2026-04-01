@@ -1,0 +1,18 @@
+<h1>My Component</h1>
+<h2>One way binding</h2>
+<div>
+  <input type="text" placeholder="Enter your name" id="name" />
+  <!--to get input value on event in angular we use id or js dom methods, as opposed to used in react.-->
+  <button (click)="fun()">Click me</button>
+  {{ name }}
+</div>
+
+<h2>Two way binding</h2>
+<!-- Two way data binding means data should be sent from component to template and template to component at a time
+ -->
+<!--we use [(ngModel)]-->
+<div>
+  <input type="text" placeholder="tell about yourself" [(ngModel)]="x" />
+  <!--we need to import FormModule in app-module as it is property of form module-->
+  {{ x }}
+</div>
