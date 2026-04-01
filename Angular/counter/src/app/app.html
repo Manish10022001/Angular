@@ -1,0 +1,10 @@
+<h1>Counter</h1>
+<div class="counter">
+  <h3 class="evenOdd">{{ isEven }}</h3>
+  <h2 class="count">Count : {{ count }}</h2>
+  <div>
+    <button [disabled]="count >= 20" (click)="incr()">+</button>
+    <button (click)="reset()">Reset</button>
+    <button [disabled]="count == 0" (click)="decr()">-</button>
+  </div>
+</div>
