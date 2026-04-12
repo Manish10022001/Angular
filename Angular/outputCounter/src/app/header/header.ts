@@ -16,4 +16,14 @@ export class Header {
   send() {
     this.manish.emit(`${this.value1} \n ${this.value2} \n ${this.value3}`);
   }
+  count = 0;
+  incr() {
+    this.count++;
+  }
+  decr() {
+    this.count--;
+  }
+  reset() {
+    this.count = 0;
+  }
 }
