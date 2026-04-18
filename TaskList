@@ -4,3 +4,6 @@ Task 3:(two way binding) (twoWay binding)
 Create a simple from with email and password and a button and print
 email and password immediately when we type and also show alert 
 "succcessfully login"when click on button
+
+Task 4: Tree input boxes in header, on submit button, submit after click
+submitted data should print on main component
