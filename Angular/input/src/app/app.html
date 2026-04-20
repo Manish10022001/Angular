@@ -1,0 +1,8 @@
+<app-header [t]="text" [c]="count"></app-header>
+<main>
+  <input type="text" [(ngModel)]="text" />
+
+  <button (click)="increment()">+</button>
+  <button (click)="decrement()">-</button>
+  <button (click)="reset()">0</button>
+</main>
