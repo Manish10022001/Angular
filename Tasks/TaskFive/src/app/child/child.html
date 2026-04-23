@@ -1,0 +1,6 @@
+<div class="child">
+  <h3>Child component</h3>
+  <input type="text" [(ngModel)]="childData" />
+  <button (click)="sendToParent()">Send to Parent</button>
+</div>
+<div>Data From Parent: {{ parentData }}</div>

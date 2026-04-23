@@ -1,0 +1,12 @@
+<div class="parent-box">
+  <h1>Parent Component</h1>
+
+  <input type="text" [(ngModel)]="inputValue" />
+  <button (click)="sendToChild()">Send to Child</button>
+
+  <h3>Data from Child: {{ dataFromChild }}</h3>
+</div>
+
+<div class="child-box">
+  <app-child (manish)="receive($event)" [parentData]="parentInput"></app-child>
+</div>
