@@ -1,0 +1,22 @@
+.parent-box,
+.child-box {
+  border: 2px solid #333;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.parent-box {
+  background-color: #f0f8ff;
+}
+
+.child-box {
+  background-color: #f9f9f9;
+}
+
+/* Optional: align side by side */
+body {
+  display: flex;
+  gap: 20px;
+}
